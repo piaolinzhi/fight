@@ -1,0 +1,12 @@
+#filter target directory.
+target/
+*~
+*.class
+# Package Files #
+*.jar
+*.war
+*.ear
+.project
+.settings/
+.classpath
+.checkstyle
