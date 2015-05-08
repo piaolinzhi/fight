@@ -1,13 +1,7 @@
 package com.fighthard.staticmethod;
 
-import static org.powermock.api.mockito.PowerMockito.mockStatic;
-import static org.powermock.api.mockito.PowerMockito.verifyStatic;
-import static org.powermock.api.mockito.PowerMockito.when;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.powermock.core.classloader.annotations.PrepareForTest;
-import org.powermock.modules.junit4.PowerMockRunner;
+import src.main.java.com.fighthard.staticmethod.ClassUnderTest;
+import src.main.java.com.fighthard.staticmethod.IdGenerator;
 
 /**
  * 静态方法Mock测试. 1.类之前加两个注释
