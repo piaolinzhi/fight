@@ -2,23 +2,33 @@ package com.fighthard.dtodomain.model;
 
 import com.fighthard.dtodomain.annotation.Desensitize;
 
-// user domain model.
-public class User {
-    @Desensitize(fieldName="uid")
+/**
+ * Same filed domain.
+ * 
+ * @author plz
+ *
+ */
+public class SameField {
+    @Desensitize
     private Long id;
     private String name;
+
     public Long getId() {
         return id;
     }
+
     public void setId(Long id) {
         this.id = id;
     }
+
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -27,6 +37,7 @@ public class User {
         result = prime * result + ((name == null) ? 0 : name.hashCode());
         return result;
     }
+
     @Override
     public boolean equals(Object obj) {
         if(this == obj)
@@ -35,7 +46,7 @@ public class User {
             return false;
         if(getClass() != obj.getClass())
             return false;
-        User other = (User) obj;
+        SameField other = (SameField) obj;
         if(id == null) {
             if(other.id != null)
                 return false;
@@ -48,5 +59,5 @@ public class User {
             return false;
         return true;
     }
-    
+
 }
