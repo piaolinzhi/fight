@@ -1,5 +1,11 @@
 package com.fighthard.scheduletask;
 
+/**
+ * @ClassName EchoServer
+ * @Description
+ * @author plz
+ * @date 2015年5月19日 下午4:00:56
+ */
 class EchoServer implements Runnable {
 
     public long startTime;

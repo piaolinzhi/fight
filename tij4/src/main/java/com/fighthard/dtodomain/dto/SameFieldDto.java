@@ -2,7 +2,6 @@ package com.fighthard.dtodomain.dto;
 
 /**
  * Same field dto model.
- * 
  * @author plz
  */
 public class SameFieldDto {

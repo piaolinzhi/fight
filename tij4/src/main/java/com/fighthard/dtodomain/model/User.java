@@ -2,23 +2,33 @@ package com.fighthard.dtodomain.model;
 
 import com.fighthard.dtodomain.annotation.Desensitize;
 
-// user domain model.
+/**
+ * @ClassName User
+ * @Description Domain model of User.
+ * @author plz
+ * @date 2015年5月19日 下午3:58:41
+ */
 public class User {
-    @Desensitize(fieldName="uid")
+    @Desensitize(fieldName = "uid")
     private Long id;
     private String name;
+
     public Long getId() {
         return id;
     }
+
     public void setId(Long id) {
         this.id = id;
     }
+
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -27,26 +37,34 @@ public class User {
         result = prime * result + ((name == null) ? 0 : name.hashCode());
         return result;
     }
+
     @Override
     public boolean equals(Object obj) {
-        if(this == obj)
+        if(this == obj) {
             return true;
-        if(obj == null)
+        }
+        if(obj == null) {
             return false;
-        if(getClass() != obj.getClass())
+        }
+        if(getClass() != obj.getClass()) {
             return false;
+        }
         User other = (User) obj;
         if(id == null) {
-            if(other.id != null)
+            if(other.id != null) {
                 return false;
-        } else if(!id.equals(other.id))
+            }
+        } else if(!id.equals(other.id)) {
             return false;
+        }
         if(name == null) {
-            if(other.name != null)
+            if(other.name != null) {
                 return false;
-        } else if(!name.equals(other.name))
+            }
+        } else if(!name.equals(other.name)) {
             return false;
+        }
         return true;
     }
-    
+
 }

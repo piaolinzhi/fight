@@ -18,5 +18,5 @@ public @interface Desensitize {
      * 转换后的field名称，如不设置则设置同名的属性.
      * @return 对应的field名称.
      */
-    public String fieldName() default "";
+    String fieldName() default "";
 }

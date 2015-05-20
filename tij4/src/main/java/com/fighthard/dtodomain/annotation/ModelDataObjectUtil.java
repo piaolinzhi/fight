@@ -3,19 +3,33 @@ package com.fighthard.dtodomain.annotation;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import com.fighthard.util.IdHandler;
 
-// Dto domain translate util.
-public class ModelDataObjectUtil {
+/**
+ * Dto-domain transmation util.
+ * @author plz
+ */
+public final class ModelDataObjectUtil {
     private static Logger log = LoggerFactory
             .getLogger(ModelDataObjectUtil.class);
 
+    private ModelDataObjectUtil() throws IllegalAccessException {
+        throw new IllegalAccessException("Try initialize a util class.");
+    }
+
+    /**
+     * @param <T>
+     *            Generic infomation.
+     * @param model
+     *            Dto model.
+     * @param dataObjectClass
+     *            Domain model class type.
+     * @return Domain model transmated.
+     */
     public static <T> T model2do(Object model, Class<T> dataObjectClass) {
         if(model == null || null == dataObjectClass) {
             return null;
@@ -31,7 +45,7 @@ public class ModelDataObjectUtil {
         }
 
         List<Field> fields = new ArrayList<Field>();
-        getAllField(fields, dataObject.getClass(), 1);
+        getAllField(fields, dataObjectClass, 1);
         for(Field field : fields) {
             try {
                 if(field.isAnnotationPresent(Desensitize.class)) {
@@ -82,6 +96,16 @@ public class ModelDataObjectUtil {
         return dataObject;
     }
 
+    /**
+     * @Description Domain object to DTO transmation util.
+     * @param <T>
+     *            Generic type infomation.
+     * @param dataObject
+     *            Domain object.
+     * @param modelClass
+     *            DTO class.
+     * @return DTO object transmated.
+     */
     public static <T> T do2model(Object dataObject, Class<T> modelClass) {
 
         if(dataObject == null || null == modelClass) {
@@ -115,7 +139,8 @@ public class ModelDataObjectUtil {
                     } else {
                         dtoFieldValue = IdHandler.idEncrypt(fieldValue
                                 .toString());
-                        log.debug(dtoFieldName + ":" + dtoFieldValue.toString());
+                        log.debug(dtoFieldName + ":"
+                                + dtoFieldValue.toString());
                     }
                     Field dtoField = getFiledByName(model.getClass(),
                             dtoFieldName);
@@ -147,10 +172,10 @@ public class ModelDataObjectUtil {
         try {
             Class<?> superClass = currentClass.getSuperclass();
 
-            Field field[] = currentClass.getDeclaredFields();
+            Field[] field = currentClass.getDeclaredFields();
             if(null != field) {
                 CollectionUtils.addAll(list, field);
-                return getAllField(list, superClass, ++i);
+                return getAllField(list, superClass, i + 1);
             }
             return list;
         } catch(Exception e) {
