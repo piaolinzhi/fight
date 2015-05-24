@@ -11,10 +11,11 @@ import javax.ws.rs.core.MediaType;
 @Path("bean-resource")
 public class BeanParamResource {
 
-    @GET
-    @Path("{region:.+}/shenyang/{district:\\w+}")
-    @Produces(MediaType.TEXT_PLAIN)
-    public String getByAddress(@BeanParam Jaxrs2GuideParam param) {
-        return param.getRegionParam() + ":" + param.getDistrictParam() + ":" + param.getStationParam() + ":" + param.getVehicleParam();
-    }
+	@GET
+	@Path("{region:.+}/shenyang/{district:\\w+}")
+	@Produces(MediaType.TEXT_PLAIN)
+	public String getByAddress(@BeanParam Jaxrs2GuideParam param) {
+		return param.getRegionParam() + ":" + param.getDistrictParam() + ":"
+				+ param.getStationParam() + ":" + param.getVehicleParam();
+	}
 }
