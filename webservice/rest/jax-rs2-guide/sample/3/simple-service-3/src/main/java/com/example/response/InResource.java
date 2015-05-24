@@ -13,6 +13,7 @@ import java.io.*;
 /**
  * Root resource (exposed at "inResource" path)
  */
+
 @Path("in-resource")
 public class InResource {
     private static final Logger LOGGER = Logger.getLogger(InResource.class);

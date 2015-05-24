@@ -12,7 +12,7 @@ import java.util.Map.Entry;
 
 @Path("path-resource")
 public class PathResource {
-    private static final Logger LOGGER = Logger.getLogger(PathResource.class);
+	private static final Logger LOGGER = Logger.getLogger(PathResource.class);
 
     @GET
     /*[a-zA-Z0-9] is equivalent to \w*/
