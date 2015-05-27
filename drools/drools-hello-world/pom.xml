@@ -32,9 +32,15 @@
     </repository>
   </repositories>
   <dependencyManagement>
-	<dependencies>
-	</dependencies>
+	
   </dependencyManagement>
+  <dependencies>
+	<dependency>
+		<groupId>org.drools</groupId>
+		<artifactId>drools-core</artifactId>
+		<version>${drools.version}</version>
+	</dependency>
+</dependencies>
   <build>
     <finalName>drools-hello-world</finalName>
   </build>
