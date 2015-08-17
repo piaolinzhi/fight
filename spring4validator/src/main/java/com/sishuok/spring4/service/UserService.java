@@ -1,10 +1,8 @@
 package com.sishuok.spring4.service;
 
-import com.sishuok.spring4.validator.CrossParameter;
 import com.sishuok.spring4.validator.CrossParameterScriptAssert;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
-
 /**
  * <p>User: Zhang Kaitao
  * <p>Date: 13-12-15

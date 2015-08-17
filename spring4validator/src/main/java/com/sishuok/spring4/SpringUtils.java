@@ -5,7 +5,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
 
 /**
  * <p>User: Zhang Kaitao
@@ -22,6 +21,7 @@ public class SpringUtils implements ApplicationContextAware {
         SpringUtils.context = context;
     }
 
+    @SuppressWarnings("unchecked")
     public static <T> T getBean(String name) {
         return (T)context.getBean(name);
     }

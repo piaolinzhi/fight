@@ -1,11 +1,9 @@
 package com.sishuok.spring4.validator;
 
-import org.hibernate.validator.internal.constraintvalidators.ScriptAssertValidator;
 
 import javax.validation.ConstraintTarget;
 import javax.validation.Constraint;
 import javax.validation.Payload;
-import javax.validation.constraints.NotNull;
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;

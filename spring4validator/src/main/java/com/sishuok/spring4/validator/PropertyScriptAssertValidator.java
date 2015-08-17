@@ -4,9 +4,7 @@ import javax.script.ScriptException;
 import javax.validation.ConstraintDeclarationException;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
-
 import com.sishuok.spring4.validator.PropertyScriptAssert;
-import org.hibernate.validator.constraints.ScriptAssert;
 import org.hibernate.validator.internal.util.Contracts;
 import org.hibernate.validator.internal.util.logging.Log;
 import org.hibernate.validator.internal.util.logging.LoggerFactory;
