@@ -7,25 +7,15 @@
 	<version>1.0-SNAPSHOT</version>
 	<name>emptywebapp Maven Webapp</name>
 	<url>http://maven.apache.org</url>
+	<properties>
+		<mahout.version>0.5</mahout.version>
+		<mahout.groupid>org.apache.mahout</mahout.groupid>
+	</properties>
 	<dependencies>
-		<!-- <dependency> <groupId>junit</groupId> <artifactId>junit</artifactId> 
-			<version>4.8</version> <scope>test</scope> </dependency> <dependency> <groupId>javax.servlet</groupId> 
-			<artifactId>javax.servlet-api</artifactId> <version>3.0.1</version> </dependency> -->
-		<!-- POI -->
-		<!-- <dependency> <groupId>org.apache.poi</groupId> <artifactId>poi</artifactId> 
-			<version>3.8</version> </dependency> <dependency> <groupId>org.apache.poi</groupId> 
-			<artifactId>poi-ooxml</artifactId> <version>3.8</version> </dependency> -->
-		<!-- POI end -->
 		<dependency>
-			<groupId>org.mybatis.caches</groupId>
-			<artifactId>mybatis-memcached</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-		<!-- hibernate validator JSR 349 -->
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-validator</artifactId>
-			<version>5.1.3.Final</version>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
 		</dependency>
 	</dependencies>
 	<build>

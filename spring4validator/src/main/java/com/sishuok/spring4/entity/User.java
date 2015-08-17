@@ -1,9 +1,6 @@
 package com.sishuok.spring4.entity;
 
 import com.sishuok.spring4.validator.CrossParameterScriptAssert;
-import com.sishuok.spring4.validator.PropertyScriptAssert;
-
-import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 /**
@@ -14,6 +11,11 @@ import java.io.Serializable;
 //@CheckPassword()
 @CrossParameterScriptAssert(property = "confirmation", script = "_this.password==_this.confirmation", lang = "javascript", alias = "_this", message = "{password.confirmation.error}")
 public class User implements Serializable {
+
+    /**
+     * @Description
+     */
+    private static final long serialVersionUID = 1L;
 
     private Long id;
 
