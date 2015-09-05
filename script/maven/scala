@@ -1,0 +1,5 @@
+mvn archetype:generate -DarchetypeGroupId=org.scala-tools.archetypes \
+-DarchetypeArtifactId=scala-archetype-simple \
+-DarchetypeVersion=1.3 \
+-DremoteRepositories=http://scala-tools.org/repo-releases \
+-DgroupId=com.plz.scala -DartifactId=scala-learning 

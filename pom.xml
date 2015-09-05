@@ -53,5 +53,6 @@
     <modules>
         <module>tij4</module>
 		<module>test/unittest</module>
+    <module>scala-learning</module>
   </modules>
 </project>
