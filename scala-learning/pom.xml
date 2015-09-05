@@ -1,33 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <artifactId>parent</artifactId>
-    <groupId>com.fighthard</groupId>
-    <version>1.0-SNAPSHOT</version>
-  </parent>
   <groupId>com.plz.scala</groupId>
   <artifactId>scala-learning</artifactId>
   <version>1.0-SNAPSHOT</version>
   <name>${project.artifactId}</name>
   <description>My wonderfull scala app</description>
   <inceptionYear>2010</inceptionYear>
-  <licenses>
-    <license>
-      <name>My License</name>
-      <url>http://....</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
-
   <properties>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
     <encoding>UTF-8</encoding>
-    <scala.version>2.11.7</scala.version>
+   <scala.version>2.11.7</scala.version>
+  <!--  <scala.version>2.9.2</scala.version> -->
   </properties>
-
-<!--
   <repositories>
     <repository>
       <id>scala-tools.org</id>
@@ -43,7 +29,7 @@
       <url>http://scala-tools.org/repo-releases</url>
     </pluginRepository>
   </pluginRepositories>
--->
+
   <dependencies>
     <dependency>
       <groupId>org.scala-lang</groupId>
@@ -52,18 +38,18 @@
     </dependency>
 
     
-    <dependency>
+<!--     <dependency>
       <groupId>org.scala-tools.testing</groupId>
-      <artifactId>specs_${scala.version}</artifactId>
+      <artifactId>specs_2.9.2</artifactId>
       <version>1.6.5</version>
       <scope>test</scope>
-    </dependency>
-    <dependency>
+    </dependency> -->
+    <!-- <dependency>
       <groupId>org.scalatest</groupId>
       <artifactId>scalatest</artifactId>
       <version>1.2</version>
       <scope>test</scope>
-    </dependency>
+    </dependency> -->
   </dependencies>
 
   <build>
