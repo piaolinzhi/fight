@@ -1,4 +1,4 @@
-package com.fighthard.httpclient;
+package com.fighthard.httpcomponent;
 
 /*
  * ==================================================================== Licensed
