@@ -14,6 +14,13 @@ object HigherOrderFunction {
     arr.foreach(element => carryOver = operation(carryOver, element))
     carryOver
   }
+  // Curry化 inject 函数,主要是参数列表的定义方式，这两种参数的写法，被编译器认为是同一种，不算重载
+
+  def injectCurry(arr: Array[Int], initial: Int)(operation: (Int, Int) => Int): Int = {
+    var carryOver = initial
+    arr.foreach(element => carryOver = operation(carryOver, element))
+    carryOver
+  }
 
   def main(args: Array[String]): Unit = {
 
