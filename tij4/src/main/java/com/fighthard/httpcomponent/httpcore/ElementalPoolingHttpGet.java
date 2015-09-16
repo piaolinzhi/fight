@@ -15,7 +15,7 @@
  * behalf of the Apache Software Foundation. For more information on the Apache
  * Software Foundation, please see <http://www.apache.org/>.
  */
-package com.fighthard.httpcomponent;
+package com.fighthard.httpcomponent.httpcore;
 
 import java.io.IOException;
 import java.util.concurrent.Future;
