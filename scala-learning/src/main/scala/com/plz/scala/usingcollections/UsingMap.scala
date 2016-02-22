@@ -19,5 +19,11 @@ object UsingMap {
       (key startsWith "D") && (value contains "blog")
     }
 
+    println("Get Andy's Feed:" + feeds.get("Andy Hunt"));
+    println("Get Bill's Feed:" + feeds.get("bill Who"));
+    
+    
+    
+
   }
 }
