@@ -30,7 +30,7 @@ public class PageBean implements Serializable{
 	private int beginPageIndex; // 页码列表的开始索引（包含）
 	private int endPageIndex; // 页码列表的结束索引（包含）
 	
-	private Map<String, Object> countResultMap; // 当前分页条件下的统计结果
+    private Map<String, Object> countResultMap; // 当前分页条件下的统计结果
 	
 	
 	public PageBean(){}
