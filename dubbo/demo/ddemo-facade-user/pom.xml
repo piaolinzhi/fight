@@ -1,0 +1,28 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.ucmed</groupId>
+		<artifactId>ddemo-common-parent</artifactId>
+		<version>1.0-SNAPSHOT</version>
+		<relativePath>../ddemo-common-parent</relativePath>
+	</parent>
+
+	<groupId>com.ucmed.ddemo.facade</groupId>
+	<artifactId>ddemo-facade-user</artifactId>
+	<version>${ddemo-facade-user.version}</version>
+	<packaging>jar</packaging>
+
+	<name>ddemo-facade-user</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+
+
+	</dependencies>
+
+</project>
