@@ -2,14 +2,12 @@ package wusc.edu.facade.user.entity;
 
 import java.util.Date;
 
-import wusc.edu.facade.user.common.entity.BaseEntity;
-
+import com.ucmed.common.entity.BaseEntity;
 
 /**
- * @描述: 用户 .
- * @作者: WuShuicheng .
- * @创建时间: 2015-1-26,上午11:23:47 .
- * @版本号: V1.0 .
+ * 
+ * 用户
+ *
  */
 public class PmsUser extends BaseEntity {
 

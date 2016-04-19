@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.ucmed</groupId>
+		<groupId>com.ucmed.ddemo</groupId>
 		<artifactId>ddemo-common-parent</artifactId>
 		<version>1.0-SNAPSHOT</version>
 		<relativePath>../ddemo-common-parent</relativePath>
@@ -16,7 +16,7 @@
 
 	<name>ddemo-service-user</name>
 	<url>http://maven.apache.org</url>
-	
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<log4j.leve>debug</log4j.leve>
@@ -47,8 +47,23 @@
 			<artifactId>ddemo-facade-user</artifactId>
 			<version>${ddemo-facade-user.version}</version>
 		</dependency>
-		
-				<!-- Common Dependency Begin -->
+		<dependency>
+			<groupId>com.ucmed.ddemo.common</groupId>
+			<artifactId>ddemo-common-core</artifactId>
+			<version>${ddemo-common-core.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ucmed.ddemo.common</groupId>
+			<artifactId>ddemo-common</artifactId>
+			<version>${ddemo-common.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ucmed.ddemo.common</groupId>
+			<artifactId>ddemo-common-config</artifactId>
+			<version>${ddemo-common-config.version}</version>
+		</dependency>
+
+		<!-- Common Dependency Begin -->
 		<dependency>
 			<groupId>antlr</groupId>
 			<artifactId>antlr</artifactId>
@@ -284,14 +299,14 @@
 			<artifactId>jsoup</artifactId>
 		</dependency>
 		<!-- Others End -->
-		
+
 		<!-- Mysql Driver Begin -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
 		<!-- Mysql Driver End -->
-		
+
 		<!-- dubbo 需要的jar start -->
 		<dependency>
 			<groupId>org.jboss.netty</groupId>

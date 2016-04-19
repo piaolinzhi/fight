@@ -1,25 +1,75 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.ucmed.ddemo</groupId>
+		<artifactId>ddemo-common-parent</artifactId>
+		<version>1.0-SNAPSHOT</version>
+		<relativePath>../ddemo-common-parent</relativePath>
+	</parent>
+	<groupId>com.ucmed.ddemo.common</groupId>
+	<artifactId>ddemo-common-web</artifactId>
+	<version>${ddemo-common-web.version}</version>
+	<packaging>jar</packaging>
 
-  <groupId>com.ucmed</groupId>
-  <artifactId>ddemo-common-web</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+	<name>ddemo-common-web</name>
+	<url>http://maven.apache.org</url>
 
-  <name>ddemo-common-web</name>
-  <url>http://maven.apache.org</url>
+	<dependencies>
+		<dependency>
+			<groupId>com.ucmed.ddemo.common</groupId>
+			<artifactId>ddemo-common</artifactId>
+			<version>${ddemo-common.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ucmed.ddemo.facade</groupId>
+			<artifactId>ddemo-facade-user</artifactId>
+			<version>${ddemo-facade-user.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+		</dependency>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+		<!-- Struts2 Dependency Begin -->
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-json-plugin</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-convention-plugin</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-spring-plugin</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.struts.xwork</groupId>
+			<artifactId>xwork-core</artifactId>
+		</dependency>
+		<!-- Struts2 Dependency End -->
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>jsp-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
 </project>

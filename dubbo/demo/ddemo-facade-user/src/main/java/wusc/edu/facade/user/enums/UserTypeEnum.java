@@ -8,9 +8,6 @@ import java.util.Map;
 /**
  * 
  * @描述: 用户类型 . <br/>
- * 
- * @作者: WuShuicheng .
- * @创建时间: 2013-9-12,上午11:16:23 .
  * @版本: 1.0 .
  */
 public enum UserTypeEnum {

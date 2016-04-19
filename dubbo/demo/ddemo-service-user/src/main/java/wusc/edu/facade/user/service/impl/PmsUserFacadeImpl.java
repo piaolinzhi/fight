@@ -8,16 +8,15 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import wusc.edu.facade.user.common.page.PageBean;
-import wusc.edu.facade.user.common.page.PageParam;
+import com.ucmed.common.page.PageBean;
+import com.ucmed.common.page.PageParam;
+
 import wusc.edu.facade.user.entity.PmsUser;
 import wusc.edu.facade.user.service.PmsUserFacade;
 import wusc.edu.service.user.biz.PmsUserBiz;
 
 /**
  * @描述: 用户Dubbo服务接口实现 .
- * @作者: WuShuicheng .
- * @创建时间: 2015-1-26,上午1:43:41 .
  * @版本号: V1.0 .
  */
 @Service("pmsUserFacade")

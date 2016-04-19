@@ -1,25 +1,21 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.ucmed.ddemo</groupId>
+		<artifactId>ddemo-common-parent</artifactId>
+		<version>1.0-SNAPSHOT</version>
+		<relativePath>../ddemo-common-parent</relativePath>
+	</parent>
+	<groupId>com.ucmed.ddemo.common</groupId>
+	<artifactId>ddemo-common-config</artifactId>
+	<version>${ddemo-common-config.version}</version>
+	<packaging>jar</packaging>
 
-  <groupId>com.ucmed</groupId>
-  <artifactId>ddemo-common-config</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+	<name>ddemo-common-config</name>
+	<url>http://maven.apache.org</url>
 
-  <name>ddemo-common-config</name>
-  <url>http://maven.apache.org</url>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+	<dependencies>
+		
+	</dependencies>
 </project>

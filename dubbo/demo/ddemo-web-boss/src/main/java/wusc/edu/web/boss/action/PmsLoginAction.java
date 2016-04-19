@@ -8,19 +8,16 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
-
+import com.ucmed.web.common.base.BaseAction;
+import com.ucmed.web.common.constant.SessionConstant;
 import wusc.edu.facade.user.entity.PmsUser;
 import wusc.edu.facade.user.enums.UserStatusEnum;
 import wusc.edu.facade.user.enums.UserTypeEnum;
 import wusc.edu.facade.user.service.PmsUserFacade;
-import wusc.edu.web.boss.base.BaseAction;
-import wusc.edu.web.common.constant.SessionConstant;
 
 /**
  * 
  * @描述: 用户登录  .
- * @作者: WuShuicheng .
- * @创建时间: 2015-1-25,下午7:50:22 .
  * @版本号: V1.0 .
  */
 @Scope("prototype")
