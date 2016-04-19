@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.ucmed</groupId>
+	<groupId>com.ucmed.ddemo</groupId>
 	<artifactId>ddemo-common-parent</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
@@ -12,12 +12,14 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
 		<ddemo.version>1.0-SNAPSHOT</ddemo.version>
+		<ddemo-common.version>1.0-SNAPSHOT</ddemo-common.version>
+		<ddemo-common-config.version>1.0-SNAPSHOT</ddemo-common-config.version>
+		<ddemo-common-core.version>1.0-SNAPSHOT</ddemo-common-core.version>
+		<ddemo-common-web.version>1.0-SNAPSHOT</ddemo-common-web.version>
 		<ddemo-facade-user.version>1.0-SNAPSHOT</ddemo-facade-user.version>
 		<ddemo-service-user.version>1.0-SNAPSHOT</ddemo-service-user.version>
 		<ddemo-web-boss.version>1.0-SNAPSHOT</ddemo-web-boss.version>
-
 		<!-- frameworks -->
 		<org.springframework.version>3.2.4.RELEASE</org.springframework.version>
 		<org.apache.struts.version>2.3.15.1</org.apache.struts.version>

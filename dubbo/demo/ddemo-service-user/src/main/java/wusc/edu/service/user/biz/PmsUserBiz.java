@@ -5,17 +5,15 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import wusc.edu.facade.user.common.page.PageBean;
-import wusc.edu.facade.user.common.page.PageParam;
+import com.ucmed.common.page.PageBean;
+import com.ucmed.common.page.PageParam;
+
 import wusc.edu.facade.user.entity.PmsUser;
 import wusc.edu.service.user.dao.PmsUserDao;
-
 
 /**
  * 
  * @描述: 用户表--服务层接口 .
- * @作者: WuShuicheng .
- * @创建时间: 2013-7-25,下午10:41:04 .
  * @版本: 1.0 .
  */
 @Service("pmsUserBiz")
@@ -63,7 +61,6 @@ public class PmsUserBiz {
 			pmsUserDao.deleteById(pmsUser.getId());
 		}
 	}
-
 	
 	/**
 	 * 更新用户信息.

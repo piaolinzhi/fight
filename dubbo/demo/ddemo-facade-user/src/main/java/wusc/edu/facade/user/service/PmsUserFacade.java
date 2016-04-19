@@ -4,16 +4,13 @@
 package wusc.edu.facade.user.service;
 
 import java.util.Map;
+import com.ucmed.common.page.PageBean;
+import com.ucmed.common.page.PageParam;
 
-import wusc.edu.facade.user.common.page.PageBean;
-import wusc.edu.facade.user.common.page.PageParam;
 import wusc.edu.facade.user.entity.PmsUser;
 
 /**
  * @描述: 用户Dubbo服务接口 .
- * @作者: WuShuicheng .
- * @创建时间: 2015-1-26,上午1:41:38 .
- * @版本号: V1.0 .
  */
 public interface PmsUserFacade {
 	/**
@@ -57,8 +54,6 @@ public interface PmsUserFacade {
 	 *            (已进行SHA1加密)
 	 */
 	public void updateUserPwd(Long userId, String newPwd, boolean isTrue);
-
-
 
 	/**
 	 * 查询并分页列出用户信息.
