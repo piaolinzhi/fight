@@ -83,19 +83,16 @@ public class ClientConfiguration {
         HttpMessageParserFactory<HttpResponse> responseParserFactory = new DefaultHttpResponseParserFactory() {
 
             @Override
-            public HttpMessageParser<HttpResponse> create(
-                    SessionInputBuffer buffer,
+            public HttpMessageParser<HttpResponse> create(SessionInputBuffer buffer,
                     MessageConstraints constraints) {
                 LineParser lineParser = new BasicLineParser() {
 
                     @Override
-                    public Header parseHeader(
-                            final CharArrayBuffer buffer) {
+                    public Header parseHeader(final CharArrayBuffer buffer) {
                         try {
                             return super.parseHeader(buffer);
                         } catch(ParseException ex) {
-                            return new BasicHeader(buffer.toString(),
-                                    null);
+                            return new BasicHeader(buffer.toString(), null);
                         }
                     }
 
@@ -104,8 +101,7 @@ public class ClientConfiguration {
                         DefaultHttpResponseFactory.INSTANCE, constraints) {
 
                     @Override
-                    protected boolean reject(final CharArrayBuffer line,
-                            int count) {
+                    protected boolean reject(final CharArrayBuffer line, int count) {
                         // try to ignore all garbage preceding a status line
                         // infinitely
                         return false;
@@ -140,19 +136,16 @@ public class ClientConfiguration {
         Registry<ConnectionSocketFactory> socketFactoryRegistry = RegistryBuilder
                 .<ConnectionSocketFactory> create()
                 .register("http", PlainConnectionSocketFactory.INSTANCE)
-                .register("https",
-                        new SSLConnectionSocketFactory(sslcontext))
-                .build();
+                .register("https", new SSLConnectionSocketFactory(sslcontext)).build();
 
         // Use custom DNS resolver to override the system DNS resolution.
         DnsResolver dnsResolver = new SystemDefaultDnsResolver() {
 
             @Override
-            public InetAddress[] resolve(final String host)
-                    throws UnknownHostException {
+            public InetAddress[] resolve(final String host) throws UnknownHostException {
                 if(host.equalsIgnoreCase("myhost")) {
-                    return new InetAddress[] { InetAddress
-                            .getByAddress(new byte[] { 127, 0, 0, 1 }) };
+                    return new InetAddress[] {
+                            InetAddress.getByAddress(new byte[] { 127, 0, 0, 1 }) };
                 } else {
                     return super.resolve(host);
                 }
@@ -165,38 +158,33 @@ public class ClientConfiguration {
                 socketFactoryRegistry, connFactory, dnsResolver);
 
         // Create socket configuration
-        SocketConfig socketConfig = SocketConfig.custom()
-                .setTcpNoDelay(true).build();
+        SocketConfig socketConfig = SocketConfig.custom().setTcpNoDelay(true).build();
         // Configure the connection manager to use socket configuration either
         // by default or for a specific host.
         connManager.setDefaultSocketConfig(socketConfig);
-        connManager.setSocketConfig(new HttpHost("somehost", 80),
-                socketConfig);
+        connManager.setSocketConfig(new HttpHost("somehost", 80), socketConfig);
         // Validate connections after 1 sec of inactivity
         connManager.setValidateAfterInactivity(1000);
 
         // Create message constraints
-        MessageConstraints messageConstraints = MessageConstraints.custom()
-                .setMaxHeaderCount(200).setMaxLineLength(2000).build();
+        MessageConstraints messageConstraints = MessageConstraints.custom().setMaxHeaderCount(200)
+                .setMaxLineLength(2000).build();
         // Create connection configuration
         ConnectionConfig connectionConfig = ConnectionConfig.custom()
                 .setMalformedInputAction(CodingErrorAction.IGNORE)
-                .setUnmappableInputAction(CodingErrorAction.IGNORE)
-                .setCharset(Consts.UTF_8)
+                .setUnmappableInputAction(CodingErrorAction.IGNORE).setCharset(Consts.UTF_8)
                 .setMessageConstraints(messageConstraints).build();
         // Configure the connection manager to use connection configuration
         // either
         // by default or for a specific host.
         connManager.setDefaultConnectionConfig(connectionConfig);
-        connManager.setConnectionConfig(new HttpHost("somehost", 80),
-                ConnectionConfig.DEFAULT);
+        connManager.setConnectionConfig(new HttpHost("somehost", 80), ConnectionConfig.DEFAULT);
 
         // Configure total max or per route limits for persistent connections
         // that can be kept in the pool or leased by the connection manager.
         connManager.setMaxTotal(100);
         connManager.setDefaultMaxPerRoute(10);
-        connManager.setMaxPerRoute(
-                new HttpRoute(new HttpHost("somehost", 80)), 20);
+        connManager.setMaxPerRoute(new HttpRoute(new HttpHost("somehost", 80)), 20);
 
         // Use custom cookie store if necessary.
         CookieStore cookieStore = new BasicCookieStore();
@@ -204,18 +192,13 @@ public class ClientConfiguration {
         CredentialsProvider credentialsProvider = new BasicCredentialsProvider();
         // Create global request configuration
         RequestConfig defaultRequestConfig = RequestConfig.custom()
-                .setCookieSpec(CookieSpecs.DEFAULT)
-                .setExpectContinueEnabled(true)
-                .setTargetPreferredAuthSchemes(Arrays
-                        .asList(AuthSchemes.NTLM, AuthSchemes.DIGEST))
-                .setProxyPreferredAuthSchemes(
-                        Arrays.asList(AuthSchemes.BASIC))
-                .build();
+                .setCookieSpec(CookieSpecs.DEFAULT).setExpectContinueEnabled(true)
+                .setTargetPreferredAuthSchemes(Arrays.asList(AuthSchemes.NTLM, AuthSchemes.DIGEST))
+                .setProxyPreferredAuthSchemes(Arrays.asList(AuthSchemes.BASIC)).build();
 
         // Create an HttpClient with the given custom dependencies and
         // configuration.
-        CloseableHttpClient httpclient = HttpClients.custom()
-                .setConnectionManager(connManager)
+        CloseableHttpClient httpclient = HttpClients.custom().setConnectionManager(connManager)
                 .setDefaultCookieStore(cookieStore)
                 .setDefaultCredentialsProvider(credentialsProvider)
                 .setProxy(new HttpHost("myproxy", 8080))
@@ -225,11 +208,10 @@ public class ClientConfiguration {
             HttpGet httpget = new HttpGet("http://www.apache.org/");
             // Request configuration can be overridden at the request level.
             // They will take precedence over the one set at the client level.
-            RequestConfig requestConfig = RequestConfig
-                    .copy(defaultRequestConfig).setSocketTimeout(5000)
-                    .setConnectTimeout(5000)
-                    .setConnectionRequestTimeout(5000)
-                    .setProxy(new HttpHost("myotherproxy", 8080)).build();
+            RequestConfig requestConfig = RequestConfig.copy(defaultRequestConfig)
+                    .setSocketTimeout(5000).setConnectTimeout(5000)
+                    .setConnectionRequestTimeout(5000).setProxy(new HttpHost("myotherproxy", 8080))
+                    .build();
             httpget.setConfig(requestConfig);
 
             // Execution context can be customized locally.
@@ -240,20 +222,16 @@ public class ClientConfiguration {
             context.setCredentialsProvider(credentialsProvider);
 
             System.out.println("executing request " + httpget.getURI());
-            CloseableHttpResponse response = httpclient.execute(httpget,
-                    context);
+            CloseableHttpResponse response = httpclient.execute(httpget, context);
             try {
                 HttpEntity entity = response.getEntity();
 
-                System.out.println(
-                        "----------------------------------------");
+                System.out.println("----------------------------------------");
                 System.out.println(response.getStatusLine());
                 if(entity != null) {
-                    System.out.println("Response content length: "
-                            + entity.getContentLength());
+                    System.out.println("Response content length: " + entity.getContentLength());
                 }
-                System.out.println(
-                        "----------------------------------------");
+                System.out.println("----------------------------------------");
 
                 // Once the request has been executed the local context can
                 // be used to examine updated state and various objects affected
