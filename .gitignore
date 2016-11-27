@@ -12,3 +12,5 @@ target/
 .checkstyle
 *.~$lock
 .svn/
+.idea
+*.iml

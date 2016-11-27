@@ -1,10 +1,9 @@
 package com.fighthard.dtodomain.dto;
 
-
 /**
+ * @author plz
  * @ClassName UserDto
  * @Description DTO of User.
- * @author plz
  * @date 2015年5月19日 下午3:55:24
  */
 public class UserDto {
