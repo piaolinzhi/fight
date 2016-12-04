@@ -1,4 +1,4 @@
-package com.fighthard.jdk8;
+package com.fighthard.jdk8.lambda;
 
 import java.util.HashMap;
 import java.util.Map;

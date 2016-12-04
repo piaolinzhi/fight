@@ -27,4 +27,11 @@ public class UserDto {
         this.name = name;
     }
 
+    @Override
+    public String toString() {
+        return "UserDto{" +
+                "uid='" + uid + '\'' +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
