@@ -28,3 +28,7 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+*.~$lock
+.svn/
+.idea
+*.iml
