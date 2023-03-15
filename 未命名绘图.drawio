@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-15T02:20:43.345Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63" etag="cX8UN611GYYYNmy2-GnS" version="21.0.6" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-15T02:37:14.077Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.63" etag="mF-siPFEyybpOF4peCe1" version="21.0.6" type="github">
   <diagram id="prtHgNgQTEPvFCAcTncT" name="Page-1">
     <mxGraphModel dx="1434" dy="796" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -55,8 +55,8 @@
         <mxCell id="dNxyNK7c78bLwvsdeMH5-28" value="文件是否存在" style="rhombus;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#000000;align=center;" parent="dNxyNK7c78bLwvsdeMH5-21" vertex="1">
           <mxGeometry x="260" y="40" width="110" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="DOJp8TKfMdWSj9f9S-v8-19" value="在存储中创建名字对应的&lt;br&gt;文件夹" style="whiteSpace=wrap;html=1;fontColor=#000000;" parent="dNxyNK7c78bLwvsdeMH5-21" vertex="1">
-          <mxGeometry x="445" y="30" width="120" height="60" as="geometry" />
+        <mxCell id="DOJp8TKfMdWSj9f9S-v8-19" value="在存储中创建名字对应的文件夹" style="whiteSpace=wrap;html=1;fontColor=#000000;" parent="dNxyNK7c78bLwvsdeMH5-21" vertex="1">
+          <mxGeometry x="450" y="30" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="DOJp8TKfMdWSj9f9S-v8-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="dNxyNK7c78bLwvsdeMH5-21" source="DOJp8TKfMdWSj9f9S-v8-23" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -106,10 +106,10 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="5Po9KjaSTDzuThY7a4_x-5" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-          <mxGeometry x="1160" y="120" width="140" height="140" as="geometry" />
+          <mxGeometry x="1160" y="120" width="170" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="5Po9KjaSTDzuThY7a4_x-6" value="&lt;h1&gt;文件结构&lt;br&gt;&lt;/h1&gt;&lt;div&gt;原文件&lt;/div&gt;&lt;div&gt;mp4&lt;/div&gt;&lt;div&gt;m3u8&lt;/div&gt;&lt;div&gt;文件元数据能存储吗？&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="1160" y="120" width="190" height="120" as="geometry" />
+        <mxCell id="5Po9KjaSTDzuThY7a4_x-6" value="&lt;h1&gt;文件结构&lt;br&gt;&lt;/h1&gt;&lt;div&gt;原文件&lt;/div&gt;&lt;div&gt;mp4&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;xxxx.t1.mp4&amp;nbsp; //template1&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; xxxx.t2.mp4&amp;nbsp; //template2&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; xxxx.t3.mp4&lt;/div&gt;&lt;div&gt;m3u8&lt;/div&gt;&lt;div&gt;文件元数据能存储吗？&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="120" width="190" height="160" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
